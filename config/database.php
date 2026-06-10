@@ -4,7 +4,7 @@ $is_local = ($_SERVER['HTTP_HOST']==='localhost' || $_SERVER['SERVER_NAME']==='l
 //Creamos los parámetros de conexión a MySql
 if($is_local){
     //BBDD EN LOCAL
-    $host = 'localhost:3307';
+    $host = 'localhost:3306';
     $user = 'root';
     $password = '';
     $database = 'tienda_db';
