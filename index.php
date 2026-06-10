@@ -2,8 +2,8 @@
 //Creo las rutas bases que diferencien entornos
 require_once __DIR__ . '/config/paths.php';
 session_start();
-require_once BASE_PATH . 'database.php';
-require_once dirname(BASE_PATH) . '/models/product_model.php';
+require_once BASE_PATH . 'config/database.php';
+require_once BASE_PATH . 'models/product_model.php';
 
 $productModel = new Product($mysqli);
 $producto = $productModel->getAllProducts();
@@ -45,6 +45,15 @@ $producto = $productModel->getAllProducts();
                 </a>
             </div>
         </nav>
+        <div style="display: flex; justify-content:center; padding:10px 0;" >
+            <div class="ui fluid category search">
+                <div class="ui icon input">
+                    <input class="prompt" type="text" id="searchbar" name="searchbar" placeholder="Buscar...">
+                    <i class="search icon"></i>
+                    <!--La búsqueda se lleva a cabo desde JS-> hay que cargar la categoría y el título en un JSON-->
+                </div>
+            </div>
+        </div>
     </header>
 
 <main class="ui container" style="margin-top:20px;">
