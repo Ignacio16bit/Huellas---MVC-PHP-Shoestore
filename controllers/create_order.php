@@ -1,9 +1,9 @@
 <?php
-require_once dirname(__DIR__) . '/config/paths.php';
+require_once __DIR__ . '/config/paths.php';
 session_start();
-require_once dirname(BASE_PATH) . '/models/order_model.php';
-require_once BASE_PATH . 'database.php';
-require_once dirname(BASE_PATH) . '/models/product_model.php';
+require_once BASE_PATH . 'models/order_model.php';
+require_once BASE_PATH . 'config/database.php';
+require_once BASE_PATH . 'models/product_model.php';
 
 //Registro del pedido en BD cuando se pague
 if (isset($_POST['pago']) && isset($_SESSION['user_id'])){

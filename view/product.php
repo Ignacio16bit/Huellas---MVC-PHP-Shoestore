@@ -1,8 +1,8 @@
 <?php
-require_once dirname(__DIR__) . '/config/paths.php';
+require_once __DIR__ . '/config/paths.php';
 session_start();
-require_once BASE_PATH . 'database.php';
-require_once dirname(BASE_PATH) . '/models/product_model.php';
+require_once BASE_PATH . 'config/database.php';
+require_once BASE_PATH . 'models/product_model.php';
 
 //Le paso la id recogida por click en index.php. Si no hay id no carga nada por defecto
 $id = $_GET['id']??0;

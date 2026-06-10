@@ -1,10 +1,10 @@
 <?php
-require_once dirname(__DIR__) . '/config/paths.php';
+require_once __DIR__ . '/config/paths.php';
 session_start();
-require_once BASE_PATH . 'database.php';
-require_once dirname(BASE_PATH) . '/models/product_model.php';
-require_once dirname(BASE_PATH) . '/models/user_model.php';
-require_once dirname(BASE_PATH) . '/models/admin_model.php';
+require_once BASE_PATH . 'config/database.php';
+require_once BASE_PATH . 'models/product_model.php';
+require_once BASE_PATH . 'models/user_model.php';
+require_once BASE_PATH . 'models/admin_model.php';
 
 
 //Control de acceso en la propia vista

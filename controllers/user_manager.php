@@ -1,9 +1,9 @@
 <?php
-require_once dirname(__DIR__) . '/config/paths.php';
+require_once __DIR__ . '/config/paths.php';
 session_start();
-require_once BASE_PATH . 'database.php';
-require_once dirname(BASE_PATH) . '/models/admin_model.php';
-require_once dirname(BASE_PATH) . '/models/user_model.php';
+require_once BASE_PATH . 'config/database.php';
+require_once BASE_PATH . 'models/admin_model.php';
+require_once BASE_PATH . 'models/user_model.php';
 
 //Aquí gestionamos las llamadas tanto de ADMIN como de USUARIO
 //Desde la vista de admin-> Edición de usuarios (sólo nombre y email)

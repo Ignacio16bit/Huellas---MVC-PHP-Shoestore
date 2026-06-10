@@ -1,8 +1,8 @@
 <?php
-require_once dirname(__DIR__) . '/config/paths.php';
+require_once __DIR__ . '/config/paths.php';
 session_start();
-require_once BASE_PATH . 'database.php';
-require_once dirname(BASE_PATH) . '/models/product_model.php';
+require_once BASE_PATH . 'config/database.php';
+require_once BASE_PATH . 'models/product_model.php';
 
 if($_SESSION['role']==='admin'){
     if (isset($_POST['create'])){
@@ -15,14 +15,14 @@ if($_SESSION['role']==='admin'){
             $image_path = null;
             if(isset($_FILES['image']) && $_FILES['image']['error']===UPLOAD_ERR_OK){
                 //Subida de imagen
-                $uploads_folder=  $_SERVER['DOCUMENT_ROOT']. "/Proyectos/Proyecto/uploads/";
+                $uploads_folder=  $_SERVER['DOCUMENT_ROOT']. "/Proyecto/uploads/";
                 //Nombrar imagen
                 $file_name = basename($_FILES["image"]["name"]);
                 $file_path = $uploads_folder . $_FILES["image"]["name"];
 
                 //guardo el archivo en /uploads
                 if (move_uploaded_file($_FILES["image"]["tmp_name"], $file_path)){
-                    $image_path = "/Proyectos/Proyecto/uploads/".$file_name;
+                    $image_path = "/Proyecto/uploads/".$file_name;
                 }
             }
             $name = $_POST['product-name'];

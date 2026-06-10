@@ -3,8 +3,8 @@ $is_local = ($_SERVER['HTTP_HOST']==='localhost' || strpos($_SERVER['HTTP_HOST']
 
 if($is_local){
     //DESARROLLO LOCAL
-    define('BASE_URL', 'http://localhost/Proyectos/Proyecto/');
-    define('BASE_PATH', 'C:/xampp/htdocs/Proyectos/Proyecto/config/');
+    define('BASE_URL', 'http://localhost/Proyecto/');
+    define('BASE_PATH', '/opt/lampp/htdocs/Proyecto/');
 } else {
     //PRODUCCIÓN
     $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS']!=='off') ? 'https' : 'http';
